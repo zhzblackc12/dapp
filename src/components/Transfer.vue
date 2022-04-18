@@ -20,7 +20,6 @@ export default {
   name: "transfer",
   methods: {
     transfer() {
-      this.$store. "0xB70546e943e7af9bc6337814f5C91e5E58c1748D"
       this.$store.dispatch("transfer");
     },
   },
