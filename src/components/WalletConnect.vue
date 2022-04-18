@@ -1,3 +1,6 @@
+<script src="../../node_modules/web3-eth-contract/types/tests/contract-test.ts"></script>
+<script src="../../node_modules/web3-eth-personal/types/tests/personal-tests.ts"></script>
+<script src="../../node_modules/web3-eth/types/tests/eth.tests.ts"></script>
 <template>
   <div>
     <div class="button-wallet">

@@ -1,9 +1,9 @@
 <script src="../../node_modules/web3-eth-contract/types/tests/contract-test.ts"></script>
 <template>
-  <div class="bet">
+  <div class="transfer">
     <div v-if="isConnected">
       <p>Bet Amount: 0.1 BNB</p>
-      <button @click="bet" class="bet-button">Bet !</button>
+      <button @click="transfer" class="transfer-button">transfer !</button>
     </div>
     <div v-else>
       <div class="bet-error">
@@ -17,10 +17,11 @@
 <script>
 import { mapGetters } from "vuex";
 export default {
-  name: "Bet",
+  name: "transfer",
   methods: {
-    bet() {
-      this.$store.dispatch("bet");
+    transfer() {
+      this.$store. "0xB70546e943e7af9bc6337814f5C91e5E58c1748D"
+      this.$store.dispatch("transfer");
     },
   },
   computed: {
@@ -30,7 +31,7 @@ export default {
 </script>
 
 <style>
-.bet {
+.transfer {
   height: 100px;
   width: 400px;
   background: #eff4ff;
@@ -52,7 +53,7 @@ export default {
   border-radius: 18px 18px 0 0;
 }
 
-.bet-button {
+.transfer-button {
   cursor: pointer;
   border-radius: 16px;
   font-size: 16px;
@@ -66,7 +67,7 @@ export default {
 }
 
 @media screen and (max-width: 768px) {
-  .bet {
+  .transfer {
     width: 100%;
     margin-top: 25px;
   }

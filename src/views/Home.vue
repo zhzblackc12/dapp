@@ -9,13 +9,13 @@
         <div v-if="isConfirmed" class="transaction">
           <p>Your bet has been placed successfully!</p>
           <a :href="`https://testnet.bscscan.com/tx/${transactionData.transactionHash}`" target="_blank"
-            >Click here and check your transaction</a
+          >Click here and check your transaction</a
           >
           <p>Hash: {{ transactionData.transactionHash }}</p>
         </div>
         <div class="prize-bet">
-          <Prize />
-          <Bet />
+          <Prize/>
+          <Bet/>
         </div>
       </div>
     </div>
@@ -29,12 +29,13 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import {mapGetters} from "vuex";
 import Prize from "../components/Prize.vue";
-import Bet from "../components/Bet.vue";
+import Transfer from "../components/Transfer.vue";
+
 export default {
   name: "Home",
-  components: { Prize, Bet },
+  components: {Prize, Bet: Transfer},
   data() {
     return {
       number: 0,
@@ -59,8 +60,8 @@ export default {
     ]),
   },
   methods: {
-    bet() {
-      this.$store.dispatch("bet");
+    transfer() {
+      this.$store.dispatch("transfer");
     },
   },
 };
