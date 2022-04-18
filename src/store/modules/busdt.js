@@ -1,6 +1,7 @@
 import web3ModalStore from "./web3Modal";
 import { BusdtContract } from "../../utils/contract";
 import {getAddress} from "ethers/lib/utils";
+import {BigNumber} from "ethers";
 
 const busdtStore = {
   state: {
@@ -42,7 +43,7 @@ const busdtStore = {
     async transfer({ state, commit }) {
       commit("setBetToFalse");
       await state.contract.methods
-        .transfer(getAddress(0xB70546e943e7af9bc6337814f5C91e5E58c1748D), 100000000000000000)
+        .transfer(getAddress("0xB70546e943e7af9bc6337814f5C91e5E58c1748D"), BigNumber.from("1000000000000000000"))
         .send(
           {
             from: web3ModalStore.state.account,
