@@ -24,7 +24,7 @@ export default {
     },
   },
   props: {
-     desc: "adf"
+     desc: ""
   },
   computed: {
     ...mapGetters(["isConnected"]),
