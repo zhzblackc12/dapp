@@ -6,38 +6,28 @@
         <div v-if="isLoading">
           <p>Your transaction is being confirmed, please wait!</p>
         </div>
-        <div v-if="isConfirmed" class="transaction">
-          <p>Your bet has been placed successfully!</p>
-          <a :href="`https://testnet.bscscan.com/tx/${transactionData.transactionHash}`" target="_blank"
-          >Click here and check your transaction</a
-          >
-          <p>Hash: {{ transactionData.transactionHash }}</p>
-        </div>
         <div class="prize-bet">
-          <Prize/>
-          <Bet/>
+          <Transfer desc="test1"/>
+          <Transfer desc="test2"/>
+          <Transfer desc="test3" />
         </div>
       </div>
     </div>
     <footer>
-      <div>
-        &copy; Criado por Vitorgamer58 -
-        <a href="https://github.com/vitorgamer58/lottery-dapp">Código fonte</a>
-      </div>
     </footer>
   </div>
 </template>
 
 <script>
 import {mapGetters} from "vuex";
-import Prize from "../components/Prize.vue";
 import Transfer from "../components/Transfer.vue";
 
 export default {
   name: "Home",
-  components: {Prize, Bet: Transfer},
+  components: { Transfer: Transfer },
   data() {
     return {
+      desc: "",
       number: 0,
       balance: 0,
       account: "",

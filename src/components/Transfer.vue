@@ -2,14 +2,14 @@
 <template>
   <div class="transfer">
     <div v-if="isConnected">
-      <p>Bet Amount: 0.1 BNB</p>
+      <p>{{this.desc}}</p>
       <button @click="transfer" class="transfer-button">transfer !</button>
     </div>
     <div v-else>
       <div class="bet-error">
         <span>You need to connect your wallet</span>
       </div>
-      <p>Bet Amount: 0.1 BNB</p>
+      <p>Transfer Amount: 0.1 BNB</p>
     </div>
   </div>
 </template>
@@ -22,6 +22,9 @@ export default {
     transfer() {
       this.$store.dispatch("transfer");
     },
+  },
+  props: {
+     desc: "adf"
   },
   computed: {
     ...mapGetters(["isConnected"]),
