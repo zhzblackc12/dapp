@@ -9,7 +9,7 @@
       <div class="bet-error">
         <span>You need to connect your wallet</span>
       </div>
-      <p>Transfer Amount: 0.1 BNB</p>
+      <p>Transfer Amount:{{num}}USDT</p>
     </div>
   </div>
 </template>
