@@ -7,9 +7,9 @@
           <p>Your transaction is being confirmed, please wait!</p>
         </div>
         <div class="prize-bet">
-          <Transfer desc="test1" />
-          <Transfer desc="test2" style="margin-left: 20px"/>
-          <Transfer desc="test3" style="margin-left: 20px"/>
+          <Transfer desc="test1" num = 1 />
+          <Transfer desc="test2" num = 2 style="margin-left: 20px"/>
+          <Transfer desc="test3" num = 3 style="margin-left: 20px"/>
         </div>
       </div>
     </div>

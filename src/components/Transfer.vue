@@ -20,11 +20,12 @@ export default {
   name: "transfer",
   methods: {
     transfer() {
-      this.$store.dispatch("transfer");
+      this.$store.dispatch("transfer", this.num);
     },
   },
   props: {
-     desc: ""
+     desc: "",
+     num:1
   },
   computed: {
     ...mapGetters(["isConnected"]),

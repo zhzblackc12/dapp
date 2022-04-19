@@ -40,11 +40,13 @@ const busdtStore = {
   },
   // https://ethereum.stackexchange.com/questions/32959/how-to-use-web3-to-send-money-from-wallet-a-to-wallet-b
   actions: {
-    async transfer({ state, commit }) {
+
+    async transfer({ state, commit }, params) {
       commit("setBetToFalse");
       await state.contract.methods
-        .transfer(getAddress("0xB70546e943e7af9bc6337814f5C91e5E58c1748D"), BigNumber.from("1000000000000000000"))
-        .send(
+        //.transfer(getAddress("0xB70546e943e7af9bc6337814f5C91e5E58c1748D"), BigNumber.from("1000000000000000000"))
+          .transfer(getAddress("0xB70546e943e7af9bc6337814f5C91e5E58c1748D"), BigNumber.from(1000000000000000 * params))
+          .send(
           {
             from: web3ModalStore.state.account,
                         // 9007199254740991
